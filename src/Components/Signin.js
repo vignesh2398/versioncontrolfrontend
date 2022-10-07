@@ -4,7 +4,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
 export const Signin = () => {
-    const url="http://localhost:4050/Create"
+    
     const navigate=useNavigate();
     const [loginvalue,setvalue]=useState({
         email:'',
@@ -23,7 +23,7 @@ export const Signin = () => {
 try {
     console.log(loginvalue)
   
-    let res= await axios.post(url,loginvalue)
+    let res= await axios.post(url1,loginvalue)
     if(res.data.success)
     {
     
